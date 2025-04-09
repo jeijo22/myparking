@@ -26,7 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        echo "Cliente registrado exitosamente.";
+       /* echo "Cliente registrado exitosamente.";-->*/
+        // Redirigir a la página de listado después de registrar
+        header("Location: listar.php"); 
     } else {
         // Verifica si el error es por clave primaria duplicada (cedula ya existente)
         if ($conn->errno == 1062) {
@@ -40,6 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $conn->close();
 } else {
-    echo "Acceso no permitido.";
+    echo "***Acceso no permitido***.";
 }
 ?>
