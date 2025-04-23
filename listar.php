@@ -24,6 +24,7 @@ if (!$resultado) {
     <style>
         body {
             padding-top: 100px; /* Espacio para evitar que el navbar cubra el contenido */
+            background-color:#e3e3e3; /* Color de fondo claro */
         }
         .container {    
             width: 500px;
@@ -32,25 +33,44 @@ if (!$resultado) {
         
         }
         table {
-            width: 100%;
+            width: 100%; /*ancho de la tabla*/
+            heitht: 100%; /*alto de la tabla*/
             border-collapse: collapse;
             margin-top: 20px;
+            box-shadow: 0 0px 10px rgba(124, 122, 117, 0.89);
         }
-        th {
-            background-color:rgb(10, 87, 231);
-            
-            }
+        th, td {
+    border: 1px solid #ddd; /* Borde claro entre celdas */
+    padding: 2px;
+    text-align: center;
+}
+
+    th {
+    background-color: rgb(10, 87, 231);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color:rgb(153, 148, 148); /* Color de fondo para filas pares */
+}
+
+tr:hover {
+    background-color:rgb(204, 202, 202); /* Efecto al pasar el mouse */
+}
+              
         .botton {
             background-color: #28a745;
             padding: 5px 10px;
             text-decoration: none;
             color: white;
             border-radius: 10px;
-        }
+            margin-top: 30px; 
+            display: inline-block;
+                    }
         
         
-        .editar { background-color: blue; }
-        .eliminar { background-color: red; }
+        .editar { background-color: #9AF088; }
+        .eliminar { background-color: #979C05; }
     
     </style>
     
@@ -93,14 +113,15 @@ if (!$resultado) {
 
     <!-- listar Clientes -->
     <div class="container">
-        <h2>Lista de Clientes Registrados</h2>
+        <h3>LISTA DE CLIENTES REGISTRADOS</h3>
         <table >
             <thead>
                 <tr>
-                    <th>Cedula</th>
+                    <th>cedula</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Celular</th>
+                    <th>Acciones</th>
                  </tr>
             </thead>
             <tbody>
@@ -111,6 +132,10 @@ if (!$resultado) {
                         <td><?php echo $fila["nombres"]; ?></td>
                         <td><?php echo $fila["apellidos"]; ?></td>
                         <td><?php echo $fila["celular"]; ?></td>
+                        <td>
+                            <a class="btn editar" href="modificar.php?id=<?php echo $fila['cedula']; ?>">Editar</a>
+                            <a class="btn eliminar" href="eliminar.php?id=<?php echo $fila['cedula']; ?>" onclick="return confirm('¿Seguro que deseas eliminar este cliente?');">Eliminar</a>                        
+                        </td>
                     </tr>
                 <?php endwhile; ?>
                 <?php else: ?>
@@ -119,7 +144,6 @@ if (!$resultado) {
         </tbody>
     </table>
 <!-- Fin listar Clientes -->
-
         <a href="index.html" class="botton">Volver al Registro</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
