@@ -1,0 +1,188 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4472C4;
+    color: white;
+}
+
+/* Contenedor principal */
+#contenedor {
+    display: grid;
+    grid-template-areas: 
+        "menu"
+        "cabecera"
+        "info"
+        "productos"
+        "contactos"
+        "pie";
+}
+
+/* Menú de navegación */
+#contenedor > nav {
+    grid-area: menu;
+    background-color: rgb(185, 42, 77);
+    padding: 10px;
+}
+
+nav a {
+    color: white !important;
+}
+
+/* Cabecera con imagen de fondo */
+#contenedor > header {
+    grid-area: cabecera;
+    background-image: url("imagenes/6167e816-ac94-4fa2-b826-d967b6f30c33.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    color: #4472C4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo oscuro para mejorar visibilidad del texto en la cabecera */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    z-index: 0; /* Fondo debe estar detrás del contenido */
+}
+
+/* Estilo para el título y el botón en la cabecera */
+header h1 {
+    font-size: 48px;
+    z-index: 1; /* Asegura que el título esté por encima del fondo */
+    position: relative; /* Necesario para asegurarse de que el z-index funcione */
+}
+
+header .explorar-btn {
+    margin-top: 20px;
+    background-color: #4E75C4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1; /* Asegura que el botón esté por encima del fondo */
+    position: relative; /* Necesario para asegurarse de que el z-index funcione */
+}
+
+header .explorar-btn:hover {
+    background-color: #3f6ce7;
+}
+
+/* Tarjetas de los servicios */
+#contenedor main {
+    grid-area: productos;
+    background-color: dimgrey;
+    padding: 20px;
+}
+
+.service-card {
+    background-color: #3A5A98;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.service-card .card-title {
+    font-size: 22px;
+}
+
+.service-card .card-text {
+    font-size: 16px;
+}
+
+/* Sección de 'Sobre Nosotros' */
+#contenedor > section {
+    grid-area: info;
+    padding: 40px 20px;
+}
+
+#contenedor > section h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#contenedor > section p {
+    font-size: 18px;
+}
+
+/* Imagen en la sección 'Sobre Nosotros' */
+section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Pie de página */
+#contenedor > footer {
+    grid-area: pie;
+    background-color: burlywood;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #A1C9FF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de navegación */
+.navbar {
+    background-color: #3A5A98;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+/* Asegura que las imágenes no se desborden */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para las tarjetas de servicios */
+.card {
+    background-color: #3A5A98;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    #contenedor {
+        grid-template-areas: 
+            "menu"
+            "cabecera"
+            "info"
+            "productos"
+            "pie";
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+    }
+}
+

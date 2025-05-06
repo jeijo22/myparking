@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PARKING</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Colores y estilo base */
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Menú  */
+        nav {
+            background-color: #2a3c74;
+            border-bottom: 2px solid #3e4a84;
+        }
+
+        nav a {
+            color: white !important;
+        }
+
+        /* Cabecera */
+        header {
+            background-color: #3A5A98;
+            height: 400px;
+            position: relative;
+            color: white;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        header img {
+            max-height: 120px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header .explorar-btn {
+            margin-top: 20px;
+            background-color: #4E75C4;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        header .explorar-btn:hover {
+            background-color: #345A98;
+            transform: scale(1.05);
+        }
+
+        /* Tarjetas de servicios */
+        .service-card {
+            background-color: #3A5A98;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+        }
+
+        /* Descripción de la empresa */
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #2A3C74;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        footer a {
+            color: #A1C9FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo del cursor en elementos interactivos */
+        .explorar-btn, .navbar-nav .nav-link {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MY PARKING</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera -->
+    <header>
+        <div>
+            <img src="imagenes/fa762376-837e-405f-8b2c-9303307267a7.jpg" alt="Logo My Parking">
+            <h1>BIENVENIDOS A MY PARKING</h1>
+            <a href="registro_cliente.html" class="explorar-btn">REGÍSTRATE</a>
+        </div>
+    </header>
+
+    <!-- Servicios de la empresa -->
+    <main class="container my-5" id="servicios">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card service-card text-center p-3">
+                    <h3 class="card-title">Registro de Vehículos</h3>
+                    <p class="card-text">Registra fácilmente tu vehículo al ingresar al parqueadero.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card service-card text-center p-3">
+                    <h3 class="card-title">Estacionamiento Seguro</h3>
+                    <p class="card-text">Tu vehículo estará protegido con nuestra tecnología avanzada de vigilancia.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card service-card text-center p-3">
+                    <h3 class="card-title">Facturación Automática</h3>
+                    <p class="card-text">Obtén tu factura de manera rápida y precisa al salir.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card service-card text-center p-3">
+                    <h3 class="card-title">Soporte al Cliente</h3>
+                    <p class="card-text">Nuestro equipo está disponible para ayudarte con cualquier consulta.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Descripción de la empresa -->
+    <section id="nosotros" class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Sobre Nosotros</h1>
+                <p>En My Parking, nos especializamos en ofrecer un servicio de estacionamiento eficiente, seguro y moderno. Nuestro objetivo es proporcionar tranquilidad a nuestros clientes mientras dejan sus vehículos en nuestras instalaciones.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imagenes/51af2679-a2a5-4129-84f7-bd2222979612.jpg" alt="Equipo de trabajo"> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Contacto: info@myparking.com | Tel: +57 123 456 789</p>
+        <p>Síguenos en:
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> 
+            <a href="#">Instagram</a>
+        </p>
+        <p>&copy; 2024 My Parking</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

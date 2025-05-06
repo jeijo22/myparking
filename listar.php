@@ -92,7 +92,7 @@ tr:hover {
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registro</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html">Registrar Cliente</a></li>                            
+                            <li><a class="dropdown-item" href="registro_cliente.html">Registrar Cliente</a></li>                            
                            </ul>
                     </li>  
                     <li class="nav-item dropdown">
@@ -144,7 +144,7 @@ tr:hover {
         </tbody>
     </table>
 <!-- Fin listar Clientes -->
-        <a href="index.html" class="botton">Volver al Registro</a>
+        <a href="registro_cliente.html" class="botton">Volver al Registro</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
  
