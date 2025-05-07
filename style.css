@@ -1,44 +1,75 @@
 body{
+    background-image: url('imagenes/parqueo.jpg'); /* imagen de fondo formulario */
+    background-size: cover;
+    background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #00a2e8;
-    color: black; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
    }
 
+   header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(6, 84, 158, 0.9); /* Azul intenso */
+    color: white;
+    padding: 0.1rem 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
 .container {
-    background: #D6D6D6;
-    padding: 55px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    margin-top: 70px; /* Espacio para el header */
+    background-color:rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para legibilidad */ 
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
+h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 label{
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
     text-align: left;
+    color: #555;
 }
 
 input {
-    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
 button {
+    margin-top: 1.5rem;
+    padding: 12px;
     background-color: #4CAF50;
     color: white;
-    padding: 10px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {

@@ -29,40 +29,49 @@
             background-color: #3A5A98;
             height: 400px;
             position: relative;
-            color: white;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 20px;
-            padding-right: 20px;
-            border-radius: 0 0 20px 20px;
+            border-radius: 0;
+            overflow: hidden;
         }
 
         header img {
-            max-height: 120px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            border-radius: 0;
         }
 
-        header h1 {
-            font-size: 50px;
+        header .contenido-header {
+           position: absolute;
+           bottom: 20px;
+           right: 20px;
+           text-align: right;
+           z-index: 1;
+           color: black;
+}
+
+        header .contenido-header h1 {
+            font-size: 40px;
             margin: 0;
-            padding: 0;
+            color: black
         }
 
         header .explorar-btn {
-            margin-top: 20px;
-            background-color: #4E75C4;
+            margin-top: 10px;
+            background-color: #28a745; /* Color verde */
             border: none;
             color: white;
-            padding: 15px 30px;
+            padding: 10px 25px;
             border-radius: 25px;
-            font-size: 18px;
+            font-size: 16px;
             text-transform: uppercase;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, transform 0.3s ease;
-            cursor: pointer;
+            text-decoration: none; /* Eliminar subrayado */
+            display: inline-block;
         }
 
         header .explorar-btn:hover {
@@ -98,9 +107,10 @@
         /* Pie de página */
         footer {
             background-color: #2A3C74;
-            padding: 40px;
+            padding: 10px 20px; /*arriba y abajo 10px izquierda y derecha 20px*/
             text-align: center;
             color: white;
+            font-size: 16px;
         }
 
         footer a {
@@ -116,13 +126,59 @@
         .explorar-btn, .navbar-nav .nav-link {
             cursor: pointer;
         }
+
+    /* Sección Nuestros Servicios con fondo negro y flamas */
+#servicios {
+    background-color: black;
+    background-image: url('imagenes/rayos1.jpg'); /* url de imagen contenedor servicios */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Texto en blanco dentro de la sección */
+#servicios h2,
+#servicios .card-title,
+#servicios .card-text {
+    color: white;
+}
+
+/* Opcional: tarjetas con fondo semitransparente */
+.service-card {
+    background-color: rgba(58, 90, 152, 0.8); /* Azul con opacidad */
+}
+/* el logo del sistema */
+.navbar-brand img {
+    max-height: 100px;
+    width: auto;
+}
+#nosotros h1 {
+    text-align: center; /* Centra el título */
+}
+#nosotros p {
+    text-align: justify;
+}
+.logo-esquina {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px; /* Ajusta según el tamaño deseado */
+    height: auto;
+    z-index: 999;
+}
     </style>
 </head>
 <body>
     <!-- Menú de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">MY PARKING</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">               
+                SISTEMA DE PARQUEADERO
+              </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -131,7 +187,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contactanos</a></li>
                 </ul>
             </div>
         </div>
@@ -140,25 +196,27 @@
     <!-- Cabecera -->
     <header>
         <div>
-            <img src="imagenes/fa762376-837e-405f-8b2c-9303307267a7.jpg" alt="Logo My Parking">
+            <img src="imagenes/locales parqueadero.jpg" alt="locales parqueadero">
+            <div class="contenido-header">
             <h1>BIENVENIDOS A MY PARKING</h1>
             <a href="registro_cliente.html" class="explorar-btn">REGÍSTRATE</a>
         </div>
     </header>
 
     <!-- Servicios de la empresa -->
-    <main class="container my-5" id="servicios">
+    <div id="servicios">
+    <main class="container my-4">
         <h2 class="text-center mb-4">Nuestros Servicios</h2>
         <div class="row">
             <div class="col-md-3">
                 <div class="card service-card text-center p-3">
-                    <h3 class="card-title">Registro de Vehículos</h3>
+                    <h3 class="card-title">Registro del Vehiculo</h3>
                     <p class="card-text">Registra fácilmente tu vehículo al ingresar al parqueadero.</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card service-card text-center p-3">
-                    <h3 class="card-title">Estacionamiento Seguro</h3>
+                    <h3 class="card-title">Seguridad</h3>
                     <p class="card-text">Tu vehículo estará protegido con nuestra tecnología avanzada de vigilancia.</p>
                 </div>
             </div>
@@ -182,26 +240,54 @@
         <div class="row">
             <div class="col-md-6">
                 <h1>Sobre Nosotros</h1>
-                <p>En My Parking, nos especializamos en ofrecer un servicio de estacionamiento eficiente, seguro y moderno. Nuestro objetivo es proporcionar tranquilidad a nuestros clientes mientras dejan sus vehículos en nuestras instalaciones.</p>
+                <p>En MY PARKING, nos especializamos en ofrecer un servicio de estacionamiento eficiente, seguro y moderno. Nuestro objetivo es proporcionar tranquilidad a nuestros clientes mientras dejan sus vehículos en nuestras instalaciones. Nuestros servicios va dirigido a tipo de vehiculo con tarifas accesibles a nuestro presupuesto, proporcionadoles confianza y seguridad para sus vehiculos.</p>
+                <p>Contamos con un equipo altamente capacitado y tecnología de punta para garantizar la seguridad y comodidad de nuestros usuarios. Desde el registro del vehículo hasta la facturación automática, cada paso está diseñado para ofrecer una experiencia fluida y sin complicaciones.</p>
+                <p>¡Únete a nosotros y descubre la diferencia de estacionar con MY PARKING!</p>
             </div>
             <div class="col-md-6">
-                <img src="imagenes/51af2679-a2a5-4129-84f7-bd2222979612.jpg" alt="Equipo de trabajo"> 
+                <img src="imagenes/vehiculo.png" alt="Equipo de trabajo"> 
             </div>
         </div>
     </section>
 
+    <!-- Sección de Contacto -->
+<section id="contacto" class="container my-5">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <form>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+        </div>
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="tucorreo@ejemplo.com">
+        </div>
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+        </div>
+        <button type="button" class="btn btn-success" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Enviar</button>
+    </form>
+</section>
+
     <!-- Pie de página -->
     <footer>
-        <p>Contacto: info@myparking.com | Tel: +57 123 456 789</p>
-        <p>Síguenos en:
-            <a href="#">Facebook</a> |
-            <a href="#">Twitter</a> 
-            <a href="#">Instagram</a>
-        </p>
-        <p>&copy; 2024 My Parking</p>
+        <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center text-center gap-4">
+            <div>
+                <p class="mb-1">email: info@myparking.com | Tel: +57 123 456 789</p>
+                <p class="mb-1">Síguenos en:
+                    <a href="#">Facebook</a> |
+                    <a href="#">Twitter</a> |
+                    <a href="#">Instagram</a>
+                </p>
+                <p class="mb-0">&copy; 2024 MY PARKING</p>
+            </div>
+            <img src="imagenes/logo.jpg" alt="Logo My Parking" style="max-height: 80px;">
+        </div>
     </footer>
+    
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+   </body>
 </html>
