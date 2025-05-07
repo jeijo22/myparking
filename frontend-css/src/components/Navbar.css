@@ -1,0 +1,34 @@
+.Navbar {
+    width: 100%;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: 20px;
+    backdrop-filter: blur(10px);
+    @keyframes colorChange {
+        0% {
+          background-color: #0d6efd; /* Azul inicial */
+        }
+        25% {
+          background-color: #ff5733; /* Rojo */
+        }
+        50% {
+          background-color: #28a745; /* Verde */
+        }
+        75% {
+          background-color: #ffc107; /* Amarillo */
+        }
+        100% {
+          background-color: #0d6efd; /* Azul final */
+        }
+      }
+      
+      .navbar {
+        animation: colorChange 5s infinite; /* Aplica la animación a la barra de navegación */
+      }
+  }
+  

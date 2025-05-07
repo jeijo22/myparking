@@ -4,12 +4,18 @@ import "./FormRegistro.css";
 const FormRegistro = () => {
   return (
     <div className="form-container">
-      <h2>Registro de clientes</h2>
+      <h2>Inicio Sesión</h2>
 
       <div className="form-group">
         <i className="fas fa-user"></i>
         <input type="text" required placeholder=" " />
-        <label>Nombre</label>
+        <label>Nombres</label>
+      </div>
+
+      <div className="form-group">
+        <i className="fas fa-user"></i>
+        <input type="text" required placeholder=" " />
+        <label>Apellidos</label>
       </div>
 
       <div className="form-group">
